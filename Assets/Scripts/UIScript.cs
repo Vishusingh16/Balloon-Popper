@@ -16,9 +16,6 @@ public class UIScript : MonoBehaviour
     public void RestartGame()
     {
           SceneManager.LoadScene("GameScene");
-
-       
-       // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     

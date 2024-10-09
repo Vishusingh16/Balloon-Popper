@@ -7,8 +7,7 @@ public class BalloonMovement : MonoBehaviour
 
     void OnEnable()
     {
-        // Assign a random movement pattern to the balloon
-        movementPattern = Random.Range(0, 3);  // 0: Straight, 1: Wavy, 2: Zig-Zag
+        movementPattern = Random.Range(0, 3); 
     }
 
     void Update()

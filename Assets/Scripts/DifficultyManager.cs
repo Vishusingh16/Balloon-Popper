@@ -4,9 +4,9 @@ public class DifficultyManager : MonoBehaviour
 {
     public static DifficultyManager Instance { get; private set; }
 
-    public float minSpawnRate = 0.5f;  // Minimum spawn rate limit
-    public float maxBalloonSpeed = 5f;  // Maximum balloon speed limit
-    public float difficultyIncreaseInterval = 30f;  // How often the difficulty increases
+    public float minSpawnRate = 0.5f;  
+    public float maxBalloonSpeed = 5f;  
+    public float difficultyIncreaseInterval = 30f; 
 
     private float difficultyTimer;
     private int difficultyLevel = 1;
@@ -32,23 +32,17 @@ public class DifficultyManager : MonoBehaviour
     private void Update()
     {
         difficultyTimer += Time.deltaTime;
-
-        // Increase difficulty after a set interval
         if (difficultyTimer >= difficultyIncreaseInterval)
         {
             IncreaseDifficulty();
-            difficultyTimer = 0;  // Reset the timer after difficulty increases
+            difficultyTimer = 0;  
         }
     }
 
     private void IncreaseDifficulty()
     {
         difficultyLevel++;
-
-        // Decrease balloon spawn rate (increasing difficulty)
         BalloonSpawner.Instance.DecreaseSpawnRate(0.1f);
-
-        // Increase balloon speed
         BalloonSpawner.Instance.IncreaseBalloonSpeed(0.2f);
 
         Debug.Log($"Difficulty increased to level {difficultyLevel}. Spawn rate and balloon speed adjusted.");
