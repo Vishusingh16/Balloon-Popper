@@ -13,3 +13,4 @@ Implemented : 1. powerUps
               9. Dynamic UI for main menu and end game
               10.Balloon pop up in different sizes
               11. Current score and high score display
+              12. Reset Score button for resseting the score
